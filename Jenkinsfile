@@ -14,7 +14,7 @@ pipeline {
                     ls -la
                     node --version
                     npm --version
-                    npm ci // because node_modules not included in remote repo
+                    npm ci
                     npm run build
                     ls -la
                 '''
@@ -22,6 +22,13 @@ pipeline {
         }
 
         stage('Test') {
+            agent {
+                docker {
+                    image 'node:18-alpine'
+                    reuseNode true
+                }
+            }
+
             steps {
                 echo 'Test Stage'
                 sh '''
