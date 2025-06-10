@@ -28,6 +28,7 @@ pipeline {
                     sh '''
                         aws --version
                         aws ecs register-task-definition --cli-input-json file://aws/task-definition-prod.json
+                        aws ecs update-service --cluster LearnJenkinsApp-Cluster-Prod --service earnJenkinsApp-Service-Prod --task-definition earnJenkinsApp-TaskDefinition-Prod:2
                     '''
                 }                
             }
