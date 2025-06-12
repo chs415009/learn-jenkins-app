@@ -4,7 +4,7 @@
     ],
     "family": "LearnJenkinsApp-TaskDefinition-Prod",
     "runtimePlatform": {
-        "cpuArchitecture": "XARM_64",
+        "cpuArchitecture": "ARM_64",
         "operatingSystemFamily": "LINUX"
     },
     "containerDefinitions": [
