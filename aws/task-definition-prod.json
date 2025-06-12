@@ -3,6 +3,10 @@
         "FARGATE"
     ],
     "family": "LearnJenkinsApp-TaskDefinition-Prod",
+    "runtimePlatform": {
+        "cpuArchitecture": "X86_64",
+        "operatingSystemFamily": "LINUX"
+    },
     "containerDefinitions": [
         {
             "name": "learnjenkinsapp",
